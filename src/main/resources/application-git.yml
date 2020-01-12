@@ -1,0 +1,25 @@
+server:
+  port: 80
+  servlet:
+    context-path: /sell
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.31.86:3306/test?characterEncoding=utf8&useSSL=false
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      show-sql: true
+      #ddl-auto: create       #自动创建表/会删除表
+      ddl-auto: update       #自动创建表/不会删除表
+      #ddl-auto: create-drop   #停下来就删掉
+      #ddlddl-auto: none       #什么都不做
+      #ddl-auto:  validate     #验证类/表结构不一致报错
+  jackson:
+    default-property-inclusion: non_null #无对象不会返回前端 如果需要返回空之短可以new一个
+wechat:
+  mpAppID: wxa9cb1707d51bbcff #自己免费申请测试号吧:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+  mpAppsecret: ca8ec1b2d0981fb2cb871a1a7b513ac9 #自己免费申请测试号吧:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+  mpToken: 834iroefdjv923rieowfj #自己免费申请测试号吧:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+  mpRedirectURI: https://www.zhuihoude.com/sell/wechat/userInfo

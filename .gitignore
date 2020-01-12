@@ -1,0 +1,46 @@
+target/
+release.properties
+local.properties
+.gitignore
+.externalToolBuilders/
+.metadata
+.mvn
+mvnw
+mvnw.cmd
+log/
+
+### Prevent information leakage ###
+application-dev.yml
+application-test.yml
+application-prod.yml
+
+### IntelliJ ###
+HELP.md
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+### Mac ###
+.DS_Store
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
