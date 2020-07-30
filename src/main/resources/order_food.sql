@@ -1,3 +1,8 @@
+/* Available version
+ * select version();
+ * 10.3.8-MariaDB
+ * 10.3.20-MariaDB*/
+
 drop database if exists test;
 create database test default character set utf8mb4 collate utf8mb4_unicode_ci;
 
