@@ -1,8 +1,11 @@
 server:
   port: 80
   servlet:
-    context-path: /sell
+    context-path: /
 spring:
+  spring:
+    resources:
+      classpath: /temelates/
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://zhuihoude.com:3306/test?characterEncoding=utf8&useSSL=false
