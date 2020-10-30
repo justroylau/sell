@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sell</title>
+</head>
+<body>
+<div id="app">
+<div >
+    <span>订单查询</span>
+    <input type="text" v-model="query">
+    <input type="button" v-on:click="search" href="javascript:void(0)" value="搜索">
+</div>
+    <table>
+        <thead> 
+        <tr>
+            <th>买家地址</th>
+            <th>买家姓名</th>
+            <th>买家ID</th>
+			<th>买家手机</th>
+			<th>创建时间</th>
+			<th>订单状态</th>
+			<th>订单详情</th>
+			<th>订单ID</th>
+			<th>订单状态</th>
+			<th>付款状态</th>
+			<th>更新时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="order in orders">
+            <td>{{ order.buyerAddress }}</td>
+			<td>{{ order.buyerName }}</td>
+			<td>{{ order.buyerOpenid }}</td>
+			<td>{{ order.buyerPhone }}</td>
+			<td>{{ order.create_time }}</td>
+			<td>{{ order.orderAmount }}</td>
+			<td>{{ order.orderDetailList }}</td>
+			<td>{{ order.orderId }}</td>
+			<td>{{ order.orderStatus }}</td>
+			<td>{{ order.payStatus }}</td>
+			<td>{{ orders.update_time }}</td>
+		</tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="https://zhuihoude.com:1443/downloads/axios.min.js"></script>
+<script src="https://zhuihoude.com:1443/downloads/vue.js"></script>
+<script src="order.js"></script>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        margin: 0.5rem auto;
+        border: 1px solid #000;
+        border-collapse: collapse; /*设置表格的边框是否被合并为一个单一的边框*/
+        border-spacing: 0; /*设置相邻单元格的边框间的距离*/
+    }
+
+    tr {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #000;
+        background-color: pink;
+    }
+
+    td, th {
+        width: 99px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-right: 1px solid #000;
+    }
+</style>
+</html>
