@@ -25,9 +25,9 @@
             <tr v-for="food in product.foods">
                 <td>{{ product.name }}</td>
                 <td>{{ food.name }}</td>
-                <td>{{ food.icon }}</td>
-                <td>{{ food.price }}</td>
-                <td>编辑</td>
+                <td><img width="80" v-bind:src="food.icon"/></td>
+                <td>¥{{ food.price }}(元)</td>
+                <td><a href="javascript:void(0)">编辑</a></td>
             </tr>
         </tbody>
     </table>
