@@ -24,6 +24,7 @@ out/
 
 ### Mac ###
 .DS_Store
+.icloud
 
 ### STS ###
 .apt_generated
